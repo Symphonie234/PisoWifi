@@ -1,0 +1,20 @@
+/* Minimal portal styles preserved and wrapped so Tailwind can process them */
+@layer components {
+  :root{--bg:#f6f8fb; --card:#ffffff; --accent:#0f62fe; --muted:#6b7280}
+  .page{background:var(--bg);font-family:Inter,system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial;color:#111;margin:0;padding:24px;display:flex;align-items:center;justify-content:center;min-height:100vh}
+  .card{background:var(--card);max-width:520px;width:100%;padding:28px;border-radius:12px;box-shadow:0 8px 24px rgba(16,24,40,0.08);text-align:center}
+  .brand{font-size:20px;margin:0 0 6px;color:var(--accent)}
+  .lead{color:var(--muted);margin:6px 0 18px}
+  .primary{display:inline-block;background:var(--accent);color:#fff;padding:10px 18px;border-radius:8px;text-decoration:none;margin-top:12px}
+  .secondary{display:inline-block;background:#eef2ff;color:var(--accent);padding:8px 14px;border-radius:8px;border:0}
+  .input{width:60%;padding:10px;border-radius:8px;border:1px solid #e6e9ef;margin-right:8px}
+  .voucher{margin:18px 0}
+  .voucher .code{font-weight:700;font-size:28px;letter-spacing:2px}
+  .meta{color:var(--muted);margin-top:6px}
+  .errors{background:#fff1f0;color:#9b1c1c;padding:8px;border-radius:8px;margin-bottom:8px}
+}
+
+@media (max-width:520px){
+  .input{width:100%;margin-bottom:8px}
+  .primary,.secondary{width:100%}
+}
