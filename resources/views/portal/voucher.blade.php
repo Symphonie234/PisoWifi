@@ -4,19 +4,19 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Your Voucher</title>
-    <link rel="stylesheet" href="/css/portal.css">
+    @vite(['resources/js/app.js'])
 </head>
-<body class="page">
-    <main class="card">
-        <h1 class="brand">Voucher Generated</h1>
-        <p class="lead">Take note of your voucher code below. Enter it into the redemption form to get internet access.</p>
+<body class="min-h-screen bg-slate-50 flex items-center justify-center p-6">
+    <main class="bg-white max-w-md w-full rounded-xl shadow-lg p-8 text-center">
+        <h1 class="text-indigo-600 text-xl font-semibold mb-1">Voucher Generated</h1>
+        <p class="text-slate-600 mb-6">Take note of your voucher code below. Enter it into the redemption form to get internet access.</p>
 
-        <div class="voucher">
-            <div class="code">{{ $voucher->code }}</div>
-            <div class="meta">Valid for {{ $voucher->duration_minutes }} minutes</div>
+        <div class="mb-6">
+            <div class="text-2xl font-bold tracking-wider text-slate-800">{{ $voucher->code }}</div>
+            <div class="text-sm text-slate-500 mt-1">Valid for {{ $voucher->duration_minutes }} minutes</div>
         </div>
 
-        <a class="primary" href="/">Back to portal</a>
+        <a class="inline-block bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700" href="/">Back to portal</a>
     </main>
 </body>
 </html>
